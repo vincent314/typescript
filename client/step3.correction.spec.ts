@@ -1,18 +1,19 @@
 /// <reference path="../node_modules/definitely-typed-jasmine/jasmine.d.ts" />
-/// <reference path="./step3.correction.ts" />
-import {User} from './step3.correction';
+import {User,IPerson} from './step3.correction';
 
 describe('Step3', ()=> {
-    function toString(user:User) {
-        return user.firstname + ' ' + user.lastname;
+    function toString(person:IPerson) {
+        return [person.firstname, person.lastname].join(',');
     }
 
     it('Test des interfaces', ()=> {
-        var john:User = new User();
+        var john:User = new User('John','Doe','AAA');
+        var other:User = new User('Anonymous','Anonymous','Anonymous');
 
-        john.firstname = 'John';
-        john.lastname = 'Doe';
+        expect(john.doLogin()).toBe(true);
+        expect(other.doLogin()).toBe(false);
 
-        expect(toString(john)).toBe('John Doe');
+        expect(toString(john)).toBe('John,Doe,AAA');
+        expect(toString(other)).toBe('Anonymous,Anonymous,Anonymous');
     });
 });
