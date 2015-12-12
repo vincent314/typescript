@@ -1,10 +1,24 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "noImplicitAny": true,
+    "target":"ES5",
+    "noImplicitAny": false,
     "removeComments": true,
     "preserveConstEnums": true,
-    "out": "../target/tsc.js",
-    "sourceMap": true
-  }
+    "outDir": "../target/ts",
+    "sourceMap": true,
+    "experimentalDecorators":true
+  },
+  "files":[
+    "../lib/node.d.ts",
+    "../node_modules/definitely-typed-jasmine/jasmine.d.ts",
+    "step1.correction.spec.ts",
+    "step1.correction.ts",
+    "step2.correction.spec.ts",
+    "step2.correction.ts",
+    "step3.correction.spec.ts",
+    "step3.correction.ts",
+    "step4.correction.spec.ts",
+    "step4.spec.js"
+  ]
 }
