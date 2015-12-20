@@ -11,7 +11,7 @@ class Tools {
     }
 }
 
-describe('Step5', ()=> {
+xdescribe('Step5', ()=> {
     it('Test annotations', ()=> {
         var tools:Tools =new Tools();
         expect(tools.power(7)).toBe(49);

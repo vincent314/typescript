@@ -1,6 +1,7 @@
 export interface IPerson {
     firstname:string;
     lastname:string;
+    login:string;
 }
 
 export class User implements IPerson{

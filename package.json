@@ -8,9 +8,6 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "definitely-typed-jasmine": "^1.0.0"
-  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-typescript": "^2.9.2"

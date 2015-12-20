@@ -1,4 +1,4 @@
-/// <reference path="../node_modules/definitely-typed-jasmine/jasmine.d.ts" />
+/// <reference path="../typings/jasmine/jasmine.d.ts" />
 import {User} from "./step2.correction";
 
 describe('Step2 - Classes', () => {

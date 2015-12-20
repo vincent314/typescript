@@ -1,4 +1,4 @@
-/// <reference path="../node_modules/definitely-typed-jasmine/jasmine.d.ts" />
+/// <reference path="../typings/jasmine/jasmine.d.ts" />
 import {hello as h, power as p} from "./step1.correction";
 
 describe('Step1', () => {

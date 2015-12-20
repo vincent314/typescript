@@ -8,10 +8,5 @@
     "outDir": "../target/ts",
     "sourceMap": true,
     "experimentalDecorators":true
-  },
-  "files":[
-    "../lib/node.d.ts",
-    "../node_modules/definitely-typed-jasmine/jasmine.d.ts",
-    "./*.ts"
-  ]
+  }
 }

@@ -1,9 +1,9 @@
-/// <reference path="../node_modules/definitely-typed-jasmine/jasmine.d.ts" />
+/// <reference path="../typings/jasmine/jasmine.d.ts" />
 import {User,IPerson} from './step3.correction';
 
 describe('Step3', ()=> {
     function toString(person:IPerson) {
-        return [person.firstname, person.lastname].join(',');
+        return [person.firstname, person.lastname, person.login].join(',');
     }
 
     it('Test des interfaces', ()=> {

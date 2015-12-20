@@ -1,3 +1,4 @@
+/// <reference path="../typings/node/node.d.ts" />
 global['power'] = function power(value){
     return value * value;
 };
