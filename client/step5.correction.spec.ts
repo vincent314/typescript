@@ -1,20 +1,17 @@
-function annotation(target:any,property:string,descriptor:TypedPropertyDescriptor<any>){
-    target.annotation = 'blah';
-}
+var model = require('./model');
 
-@annotation
-class Tools {
-    annotation:string;
+describe('Step 5',()=>{
+   it('Test module',()=>{
+       var owner = new model.Person('Doe','John');
+       var contract = new model.Contract('0123456', owner);
 
-    power(value:number):number {
-        return value * value;
-    }
-}
+       expect(contract).toEqual({
+           id:'0123456',
+           owner:{
+               name:'Doe',
+               surname:'John'
+           }
+       });
 
-xdescribe('Step5', ()=> {
-    it('Test annotations', ()=> {
-        var tools:Tools =new Tools();
-        expect(tools.power(7)).toBe(49);
-        expect(tools.annotation).toBe('blah');
-    });
+   });
 });

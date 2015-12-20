@@ -4,7 +4,7 @@ export class User {
     constructor(public firstname:string, public lastname:string) {
     }
 
-    toString():string{
+    toString():string {
         return this.firstname + " " + this.lastname + " " + this.mobile;
     }
 }

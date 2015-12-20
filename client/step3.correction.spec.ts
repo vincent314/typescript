@@ -1,4 +1,4 @@
-/// <reference path="../typings/jasmine/jasmine.d.ts" />
+/// <reference path="../typings/tsd.d.ts" />
 import {User,IPerson} from './step3.correction';
 
 describe('Step3', ()=> {

@@ -1,4 +1,4 @@
-/// <reference path="../typings/jasmine/jasmine.d.ts" />
+/// <reference path="../typings/tsd.d.ts" />
 import {User} from "./step2.correction";
 
 describe('Step2 - Classes', () => {
