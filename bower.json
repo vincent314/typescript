@@ -1,0 +1,23 @@
+{
+  "name": "test-typescript",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "vincent <vincent314@hotmail.fr>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/vincent314/typescript",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-mocks": "~1.4.8"
+  }
+}

@@ -30,3 +30,4 @@ node_modules
 *.iml
 target
 typings
+bower_components
