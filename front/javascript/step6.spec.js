@@ -1,5 +1,5 @@
 describe('Step6 Javascript', function () {
-    var $scope, ctrl;
+    var ctrl;
 
     beforeEach(function () {
         module('test-javascript');
@@ -7,10 +7,7 @@ describe('Step6 Javascript', function () {
 
 
     beforeEach(inject(['$rootScope', '$controller', function ($rootScope, $controller) {
-        $scope = $rootScope.$new();
-        ctrl = $controller('HelloCtrl', {
-            $scope: $scope
-        });
+        ctrl = $controller('HelloCtrl');
     }]));
 
     it('Test du controleur', function () {

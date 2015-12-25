@@ -10,10 +10,7 @@ describe('Step6 Typescript', ()=> {
     beforeEach(() => angular.mock.module('test-typescript'));
 
     beforeEach(inject(['$rootScope', '$controller', ($rootScope:IRootScopeService, $controller:IControllerService) => {
-        var $scope:IScope = $rootScope.$new();
-        ctrl = $controller(HelloCtrlTs, {
-            $scope: $scope
-        });
+        ctrl = $controller(HelloCtrlTs);
     }]));
 
     it('Test du controleur', () => expect(ctrl.text).toBe('Hello, World'));
