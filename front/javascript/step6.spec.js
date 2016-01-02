@@ -2,7 +2,7 @@ describe('Step6 Javascript', function () {
     var ctrl;
 
     beforeEach(function () {
-        module('test-javascript');
+        module('step6');
     });
 
 

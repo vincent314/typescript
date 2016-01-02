@@ -5,7 +5,7 @@
     "noImplicitAny": false,
     "removeComments": true,
     "preserveConstEnums": true,
-    "outDir": "../../target/front",
+    "out": "../../target/front/app.js",
     "sourceMap": true,
     "experimentalDecorators":true
   }
