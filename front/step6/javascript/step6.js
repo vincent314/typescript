@@ -1,5 +1,5 @@
 (function () {
-    angular.module('step6', [])
+    angular.module('step6-js', [])
         .controller('HelloCtrl', HelloCtrl);
 
     function HelloCtrl(){

@@ -8,13 +8,14 @@ module.exports = function(config) {
     files: [
 		'bower_components/angular/angular.js',
       	'bower_components/angular-mocks/angular-mocks.js',
-		'front/javascript/*.js',
-		'target/front/*.js'
+		'front/step6/javascript/*.js',
+		'front/step6/spec/*.js',
+		'target/front/step6/*.js'
     ],
 
 	plugins : [
 		//'karma-chrome-launcher',
-		'karma-phantomJS-launcher',
+		'karma-phantomjs-launcher',
 		'karma-jasmine'
 		]
   });

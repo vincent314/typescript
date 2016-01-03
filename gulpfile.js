@@ -7,10 +7,22 @@ gulp.task('compile-back', function () {
         .pipe(gulp.dest('./target/back'));
 });
 
-gulp.task('compile-front',function(){
-   return gulp.src(['./front/typescript/**/*.ts'])
-       .pipe(ts(require('./front/typescript/tsconfig.json').compilerOptions))
+gulp.task('compile-front-step6',function(){
+   return gulp.src(['./front/step6/typescript/**/*.ts'])
+       .pipe(ts(require('./front/step6/typescript/tsconfig.json').compilerOptions))
        .pipe(gulp.dest('./target/front'))
 });
 
-gulp.task('compile',['compile-back','compile-front']);
+gulp.task('compile-front-step6-spec',function(){
+   return gulp.src(['./front/step6/spec/**/*.ts'])
+       .pipe(ts(require('./front/step6/spec/tsconfig.json').compilerOptions))
+       .pipe(gulp.dest('./target/front'))
+});
+
+gulp.task('compile-front-step7',function(){
+    return gulp.src(['./front/step7/**/*.ts'])
+        .pipe(ts(require('./front/step7/tsconfig.json').compilerOptions))
+        .pipe(gulp.dest('./target/front'))
+});
+
+gulp.task('compile',['compile-back','compile-front-step6', 'compile-front-step6-spec','compile-front-step7']);
