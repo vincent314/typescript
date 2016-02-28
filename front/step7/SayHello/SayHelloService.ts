@@ -1,3 +1,4 @@
+///<reference path="../Model/UserModel.d.ts" />
 module TestApp.SayHello{
     import User = TestApp.Model.User;
 

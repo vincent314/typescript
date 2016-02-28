@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
+var jasmine = require('gulp-jasmine');
+var Server = require('karma').Server;
 
 gulp.task('compile-back', function () {
     return gulp.src(['./back/**/*.ts'])
@@ -26,3 +28,20 @@ gulp.task('compile-front-step7',function(){
 });
 
 gulp.task('compile',['compile-back','compile-front-step6', 'compile-front-step6-spec','compile-front-step7']);
+
+gulp.task('test-back',['compile'],function() {
+    return gulp.src(['./target/back/*.js'])
+        .pipe(jasmine({
+            verbose:true
+        }));
+});
+
+gulp.task('test-front', ['compile'], function (done) {
+    new Server({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun:true
+    },function(err){
+        console.log(err);
+        done();
+    }).start();
+});
