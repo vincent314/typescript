@@ -7,8 +7,8 @@ describe('Step3', ()=> {
     }
 
     it('Test des interfaces', ()=> {
-        var john:User = new User('John','Doe','AAA');
-        var other:User = new User('Anonymous','Anonymous','Anonymous');
+        var john:User = new User('John', 'Doe', 'AAA');
+        var other:User = new User('Anonymous', 'Anonymous', 'Anonymous');
 
         expect(john.doLogin()).toBe(true);
         expect(other.doLogin()).toBe(false);

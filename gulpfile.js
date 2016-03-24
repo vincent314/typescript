@@ -45,3 +45,5 @@ gulp.task('test-front', ['compile'], function (done) {
         done();
     }).start();
 });
+
+gulp.task('default', ['test-back', 'test-front']);

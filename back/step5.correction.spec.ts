@@ -5,13 +5,14 @@ describe('Step 5', ()=> {
         var owner = new Person('Doe', 'John');
         var contract = new Contract('0123456', owner);
 
-        expect(contract).toEqual({
+        var expected:Contract = {
             id: '0123456',
-            owner: {
+            owner: <Person>{
                 name: 'Doe',
                 surname: 'John'
             }
-        });
+        };
 
+        expect(contract).toEqual(expected);
     });
 });

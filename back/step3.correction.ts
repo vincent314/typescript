@@ -4,11 +4,11 @@ export interface IPerson {
     login:string;
 }
 
-export class User implements IPerson{
-    constructor(public firstname:string,public lastname:string,public login:string) {
+export class User implements IPerson {
+    constructor(public firstname:string, public lastname:string, public login:string) {
     };
 
-    doLogin():boolean{
-        return this.login=='AAA';
+    doLogin():boolean {
+        return this.login == 'AAA';
     }
 }
