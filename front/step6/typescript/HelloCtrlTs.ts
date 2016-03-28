@@ -1,4 +1,4 @@
-class HelloCtrlTs {
+export class HelloCtrlTs {
     public text:string;
 
     constructor() {

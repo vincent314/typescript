@@ -1,4 +1,3 @@
-/// <reference path="../typings/tsd.d.ts" />
 import {hello as h, power as p} from "./step1.correction";
 
 describe('Step1', () => {

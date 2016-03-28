@@ -8,6 +8,7 @@ describe('Step6 Javascript', function () {
 
     beforeEach(inject(['$rootScope', '$controller', function ($rootScope, $controller) {
         ctrl = $controller('HelloCtrl');
+        console.log(ctrl);
     }]));
 
     it('Test du controleur', function () {

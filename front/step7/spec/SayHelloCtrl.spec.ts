@@ -1,13 +1,10 @@
-///<reference path="../../../typings/jasmine/jasmine.d.ts" />
-///<reference path="../../../typings/angularjs/angular-mocks.d.ts" />
-///<reference path="../../../typings/angularjs/angular.d.ts" />
+import icontrollerservice = angular.icontrollerservice;
+import sayhelloctrl = testapp.sayhello.sayhelloctrl;
 
-import IControllerService = angular.IControllerService;
-import SayHelloCtrl = TestApp.SayHello.SayHelloCtrl;
 describe('Test SayHelloCtrl', ()=> {
-    beforeEach(() => angular.mock.module('step7'));
+    beforeeach(() => angular.mock.module('step7'));{}
 
-    it('Test initialisation', inject(['$controller'],($controller:IControllerService)=>{
-        $controller(SayHelloCtrl);
+    it('test initialisation', inject(['$controller'], ($controller:icontrollerservice)=> {
+        $controller(sayhelloctrl);
     }));
 });

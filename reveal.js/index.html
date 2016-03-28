@@ -179,6 +179,7 @@
                 * types complexes : **classes** et **interfaces**
                 * tableaux : **Array<?>**
                 * types function
+                * généricité
 
                 ```typescript
                 var name:string;
@@ -194,11 +195,12 @@
                 * Définir un **contrat** au sein ou à l'extérieur de l'application
                 * fichiers de définition **.d.ts** &asymp; fichiers header en C
                 * typer des fichiers ou des librairies pré-existants JS
-                * Banque de fichiers de définition **TSD** (**tsd.json**)
+                * Banque de fichiers de définition (**typings.json**)
 
                 ```
-                npm install -g tsd
-                tsd install angular --save
+                npm install -g typings
+                typings init
+                typings install angular --save
                 ```
             </script>
         </section>

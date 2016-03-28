@@ -5,8 +5,13 @@
     "noImplicitAny": false,
     "removeComments": true,
     "preserveConstEnums": true,
-    "out": "../../target/front/step7/step7.js",
+    "out": "../target/front/bundle.ts.js",
     "sourceMap": true,
     "experimentalDecorators":true
-  }
+  },
+  "files":[
+    "step6/typescript/step6.correction.ts",
+    "step6/typescript/step6.correction.spec.ts",
+    "../typings/browser.d.ts"
+  ]
 }
