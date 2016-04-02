@@ -8,5 +8,17 @@
     "outDir": "../target/back",
     "sourceMap": true,
     "experimentalDecorators":true
-  }
+  },
+  "files": [
+    "./step0.correction.ts",
+    "./step1.correction.ts",
+    "./step1.correction.main.ts",
+    "./step2.correction.ts",
+    "./step2.correction.spec.ts",
+    "./step3.correction.ts",
+    "./step3.correction.spec.ts",
+    "./step4.correction.ts",
+    "./step5.correction.spec.ts",
+    "../typings/main.d.ts"
+  ]
 }

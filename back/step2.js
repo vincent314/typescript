@@ -6,5 +6,5 @@ function User(firstname, lastname){
 }
 
 User.prototype.toString = function () {
-    return this.firstname + " " + this.lastname;
+    return this.firstname + ' ' + this.lastname;
 };
