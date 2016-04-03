@@ -1,10 +1,8 @@
-export class User {
-    public mobile:string;
+export interface User {
+    firstname:string;
+    lastname:string;
+}
 
-    constructor(public firstname:string, public lastname:string) {
-    }
-
-    toString():string {
-        return this.firstname + " " + this.lastname + " " + this.mobile;
-    }
+export interface UserWithMobile extends User{
+    mobile:string;
 }
