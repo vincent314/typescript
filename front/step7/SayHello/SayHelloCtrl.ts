@@ -1,11 +1,9 @@
-///<reference path="./SayHelloService" />
-///<reference path="../Model/UserModel" />
+import {SayHelloService} from "./SayHelloService";
+import {User} from "../Model/UserModel";
+export class SayHelloCtrl {
+    user:User;
 
-module TestApp.SayHello{
-    export class SayHelloCtrl{
-        user:TestApp.Model.User;
-        constructor(SayHelloService:TestApp.SayHello.SayHelloService){
-            this.user = SayHelloService.getUser();
-        }
+    constructor(SayHelloService:SayHelloService) {
+        this.user = SayHelloService.getUser();
     }
 }

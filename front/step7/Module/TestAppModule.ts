@@ -1,9 +1,8 @@
-///<reference path="../../../typings/angularjs/angular.d.ts" />
-///<reference path="../SayHello/SayHelloCtrl" />
-///<reference path="../SayHello/SayHelloService" />
-module TestApp {
-    var module:angular.IModule = angular.module('step7', []);
+import angular = require('angular');
+import {SayHelloService} from '../SayHello/SayHelloService';
+import {SayHelloCtrl} from '../SayHello/SayHelloCtrl';
 
-    module.service('SayHelloService', SayHello.SayHelloService);
-    module.controller('SayHelloCtrl', SayHello.SayHelloCtrl);
-}
+var app:angular.IModule = angular.module('step7', []);
+
+app.service('SayHelloService', SayHelloService);
+app.controller('SayHelloCtrl', SayHelloCtrl);

@@ -1,49 +1,46 @@
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
 var jasmine = require('gulp-jasmine');
-var Server = require('karma').Server;
+var webpackStream = require('webpack-stream');
+var webpack = require('webpack');
+var WebpackDevServer = require('webpack-dev-server');
+var webpackConfig = require('./webpack.config.js');
+var gutil = require('gulp-util');
 
 gulp.task('compile-back', function () {
-    return gulp.src(['./back/**/*.ts'])
+    return gulp.src([__dirname + '/back/*.ts', __dirname + '/typings/main.d.ts'])
         .pipe(ts(require('./back/tsconfig.json').compilerOptions))
         .pipe(gulp.dest('./target/back'));
 });
 
-gulp.task('compile-front-step6',function(){
-   return gulp.src(['./front/step6/typescript/**/*.ts'])
-       .pipe(ts(require('./front/step6/typescript/tsconfig.json').compilerOptions))
-       .pipe(gulp.dest('./target/front'))
-});
-
-gulp.task('compile-front-step6-spec',function(){
-   return gulp.src(['./front/step6/spec/**/*.ts'])
-       .pipe(ts(require('./front/step6/spec/tsconfig.json').compilerOptions))
-       .pipe(gulp.dest('./target/front'))
-});
-
-gulp.task('compile-front-step7',function(){
-    return gulp.src(['./front/step7/**/*.ts'])
-        .pipe(ts(require('./front/step7/tsconfig.json').compilerOptions))
+gulp.task('compile-front-step6', function () {
+    return gulp.src([__dirname + '/front/step6/typescript/**/*.ts', __dirname + '/typings/browser.d.ts'])
+        .pipe(ts(require('./front/step6/typescript/tsconfig.json').compilerOptions))
         .pipe(gulp.dest('./target/front'))
 });
 
-gulp.task('compile',['compile-back','compile-front-step6', 'compile-front-step6-spec','compile-front-step7']);
+// gulp.task('compile-front-step7', function () {
+//     return gulp.src(['front/step7/Module/TestAppModule.ts'])
+//         .pipe(webpackStream(webpackConfig))
+//         .pipe(gulp.dest('target/front/step7/'));
+// });
 
-gulp.task('test-back',['compile'],function() {
-    return gulp.src(['./target/back/*.js'])
-        .pipe(jasmine({
-            verbose:true
-        }));
+gulp.task('step7-dev-server', function () {
+    // Start a webpack-dev-server
+    var compiler = webpack(webpackConfig);
+    new WebpackDevServer(compiler, {
+        contentBase: __dirname + '/front/step7',
+        stats: {
+            colors: true
+        }
+        // server and middleware options
+    }).listen(8080, 'localhost', function (err) {
+        if (err) throw new gutil.PluginError('webpack-dev-server', err);
+        // Server listening
+        gutil.log('[webpack-dev-server]', 'http://localhost:8080/webpack-dev-server/index.html');
+    });
 });
 
-gulp.task('test-front', ['compile'], function (done) {
-    new Server({
-        configFile: __dirname + '/karma.conf.js',
-        singleRun:true
-    },function(err){
-        console.log(err);
-        done();
-    }).start();
-});
+gulp.task('compile', ['compile-back', 'compile-front-step6']);
 
-gulp.task('default', ['test-back', 'test-front']);
+gulp.task('default', ['compile','step7-dev-server']);

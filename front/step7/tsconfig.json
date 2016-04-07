@@ -8,5 +8,9 @@
     "out": "../../target/front/step7/step7.js",
     "sourceMap": true,
     "experimentalDecorators":true
-  }
+  },
+  "files":[
+    "../../typings/browser.d.ts",
+    "Module/TestAppModule.ts"
+  ]
 }
