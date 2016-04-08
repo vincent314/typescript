@@ -1,0 +1,24 @@
+.step h1 {
+    font-size: 140px;
+}
+
+.step h2 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#fonctionnalites .small1{
+    font-size: 40px;
+}
+#fonctionnalites .small2{
+    font-size: 35px;
+}
+#fonctionnalites .small3{
+    font-size: 30px;
+}
+#fonctionnalites .small4{
+    font-size: 25px;
+}
+#fonctionnalites .small5{
+    font-size: 20px;
+}
