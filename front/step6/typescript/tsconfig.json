@@ -10,7 +10,7 @@
     "experimentalDecorators":true
   },
   "files":[
-    "./step6.correction.ts",
+    "./step6.ts",
     "../../../typings/browser.d.ts"
   ]
 }

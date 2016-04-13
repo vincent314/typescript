@@ -10,15 +10,14 @@
     "experimentalDecorators":true
   },
   "files": [
-    "./step0.correction.ts",
-    "./step1.correction.ts",
-    "./step1.correction.main.ts",
-    "./step2.correction.ts",
-    "./step2.correction.main.ts",
-    "./step3.correction.ts",
-    "./step3.correction.main.ts",
-    "./step4.correction.ts",
-    "./step5.correction.spec.ts",
+    "./step0.ts",
+    "./step1.ts",
+    "./step1.main.ts",
+    "./step2.ts",
+    "./step2.main.ts",
+    "./step3.spec.ts",
+    "./step4.ts",
+    "./step5.spec.ts",
     "../typings/main.d.ts"
   ]
 }

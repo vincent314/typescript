@@ -1,4 +1,4 @@
-import {User, UserWithMobile} from "./step2.correction";
+import {User, UserWithMobile} from "./step2";
 
 // Type any
 var user1:any = {
