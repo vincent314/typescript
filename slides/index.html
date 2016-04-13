@@ -139,17 +139,19 @@
     </div>
 
     <!--/////////////// PRÉSENTATION TS /////////////////-->
-    <div id="presentation" class="step" data-x="-1000" data-y="-1900" data-scale="1" data-rotate="0">
+    <div id="presentation" class="step" data-x="-1000" data-y="-1800" data-scale="1" data-rotate="0">
         <p>1°/ <strong>Surcouche à Javascript ES5, ES6 … et ES7 !</strong></p>
         <!--Copier/coller migration-->
         <p>2°/ <strong>Ajoute le typage</strong> (optionnel)<br/>
             lisibilité, checks compile-time, <span class="small2">structure de données</span>, <span class="small3">auto-completion IDE</span>
         </p>
         <!-- check compilation, robustesse, IDEs -->
+        <p>Initiative de <strong>Microsoft</strong>, rejoint ensuite par <strong>Google</strong></p>
+        <p>Popularisé par <strong>Angular2</strong>, <strong>Ionic2</strong> …</p>
     </div>
 
     <!--/////////////// Transpilation /////////////////-->
-    <div id="transpilation" class="step" data-x="-1000" data-y="-1400" data-scale="1" data-rotate="0">
+    <div id="transpilation" class="step" data-x="-1000" data-y="-1200" data-scale="1" data-rotate="0">
         <h2>Transpilation</h2>
 
         <p>Conversion de code à code</p>
@@ -160,7 +162,7 @@
     </div>
 
     <!--/////////////// TRANSPILATION 2 /////////////////-->
-    <div id="transpilation2" class="step" data-x="-1000" data-y="-900" data-scale="1" data-rotate="0">
+    <div id="transpilation2" class="step" data-x="-1000" data-y="-800" data-scale="1" data-rotate="0">
         <h2>Don't panic !</h2>
 
         <p>Opération courante (ex: Webpack, minification …)</p>
@@ -174,9 +176,12 @@
     </div>
 
     <!--/////////////// OUTILS /////////////////-->
-    <div id="outils-list" class="step" data-x="400" data-y="-2000" data-scale="1" data-rotate="0">
+    <div id="outils-list" class="step" data-x="400" data-y="-1800" data-scale="1" data-rotate="0">
         <h2>TSC</h2>
         <p>Compilateur</p>
+
+        <h2>ts-node</h2>
+        <p>Exécution directe avec node</p>
 
         <h2>typings</h2>
         <p>Typing des libs vendor (underscore, angular …)</p>
@@ -188,8 +193,8 @@
         <p>Intégration dans Webpack</p>
     </div>
 
-    <!--/////////////// BILAN /////////////////-->
-    <div id="tsconfig" class="step" data-x="400" data-y="-1300" data-scale="1" data-rotate="0">
+    <!--/////////////// TSCONFIG /////////////////-->
+    <div id="tsconfig" class="step" data-x="400" data-y="-1100" data-scale="1" data-rotate="0">
         <h2>tsconfig.json</h2>
         <ul>
             <li>fichiers <strong>.ts</strong></li>
@@ -241,9 +246,65 @@
     <div id="typings" class="step" data-x="1400" data-y="-1000" data-scale="1" data-rotate="90">
         <h2>Typings</h2>
         <pre>
-        npm install -g tsd
-        tsd install angular --save
+        npm install -g typings
+        typings install angular --save
         </pre>
+    </div>
+
+
+    <!--/////////////////////////////////-->
+    <!--/////////////////////////////////-->
+
+    <!--////////////// DEMO ///////////////////-->
+    <div id="demo" class="step" data-x="-3500" data-y="1000" data-scale="2" data-rotate="-90">
+        <h1>DEMO</h1>
+    </div>
+
+    <!--////////////// STEP 0 ///////////////////-->
+    <div id="step0" class="step" data-x="-2500" data-y="1000" data-scale="2" data-rotate="0">
+        <h2>Step 0</h2>
+        <p>JS == TS</p>
+    </div>
+
+    <!--////////////// STEP 1 ///////////////////-->
+    <div id="step1" class="step" data-x="-2500" data-y="1600" data-scale="2" data-rotate="0">
+        <h2>Step 1</h2>
+        <p>Imports</p>
+        <p>Fonctions</p>
+        <p>Typage simple</p>
+    </div>
+
+    <!--////////////// STEP 2 ///////////////////-->
+    <div id="step2" class="step" data-x="-1500" data-y="1000" data-scale="2" data-rotate="0">
+        <h2>Step 2</h2>
+        <p>Interfaces</p>
+        <p>Structures de données</p>
+        <p>Type <strong>any</strong></p>
+    </div>
+
+    <!--////////////// STEP 3 ///////////////////-->
+    <div id="step3" class="step" data-x="-1500" data-y="1600" data-scale="2" data-rotate="0">
+        <h2>Step 3</h2>
+        <p>Bibliothèque sans typage TS</p>
+    </div>
+
+    <!--////////////// STEP 4 ///////////////////-->
+    <div id="step4" class="step" data-x="-500" data-y="1000" data-scale="2" data-rotate="0">
+        <h2>Step 4</h2>
+        <p>Variables d'ambiance</p>
+    </div>
+
+    <!--////////////// STEP 6 ///////////////////-->
+    <div id="step6" class="step" data-x="500" data-y="1000" data-scale="2" data-rotate="0">
+        <h2>Step 6</h2>
+        <p>Application Front</p>
+        <p>Angular 1</p>
+    </div>
+
+    <!--////////////// STEP 7 ///////////////////-->
+    <div id="step7" class="step" data-x="500" data-y="1600" data-scale="2" data-rotate="0">
+        <h2>Step 7</h2>
+        <p>Angular 1 + Webpack</p>
     </div>
 
     <!--/////////////// OVERVIEW 2 /////////////////-->
