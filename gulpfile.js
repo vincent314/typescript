@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
 var jasmine = require('gulp-jasmine');
-var webpackStream = require('webpack-stream');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config.js');
@@ -18,12 +17,6 @@ gulp.task('compile-front-step6', function () {
         .pipe(ts(require('./front/step6/typescript/tsconfig.json').compilerOptions))
         .pipe(gulp.dest('./target/front'))
 });
-
-// gulp.task('compile-front-step7', function () {
-//     return gulp.src(['front/step7/Module/TestAppModule.ts'])
-//         .pipe(webpackStream(webpackConfig))
-//         .pipe(gulp.dest('target/front/step7/'));
-// });
 
 gulp.task('step7-dev-server', function () {
     // Start a webpack-dev-server
